@@ -1,0 +1,12 @@
+﻿@model IndexModel
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = $"Страница {Model.CurrentPage}";
+}
+
+@foreach (var article in Model.News)
+{
+    var link = Model.FormatLink(article.Id);
+    <text><a href="@link">@link</a></text>
+    <br />
+}

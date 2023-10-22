@@ -1,0 +1,7 @@
+﻿@model ArticleModel
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = Model.Article.Title;
+}
+
+<a href="@Model.GoBackLink">Go back</a>
