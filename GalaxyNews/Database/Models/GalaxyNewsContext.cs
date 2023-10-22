@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Npgsql;
 
 namespace GalaxyNews.Database.Models;
 
@@ -19,7 +20,7 @@ public partial class GalaxyNewsContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseNpgsql("Name=GalaxyNews");
+        optionsBuilder.UseNpgsql(Environment.GetEnvironmentVariable("galaxynews_cs"));
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
