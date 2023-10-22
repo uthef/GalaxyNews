@@ -132,15 +132,6 @@ INSERT INTO public.news (id, date, title, announce, content, image) VALUES (17, 
 
 
 --
--- TOC entry 4844 (class 0 OID 0)
--- Dependencies: 215
--- Name: news_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.news_id_seq', 3, true);
-
-
---
 -- TOC entry 4690 (class 2606 OID 16570)
 -- Name: news news_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
