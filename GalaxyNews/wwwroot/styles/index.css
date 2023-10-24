@@ -51,7 +51,7 @@ h2 {
     position: relative;
     text-align: justify;
     margin-bottom: 64px;
-    min-width: 360px;
+    min-width: 256px;
     flex: calc(50% - 16px);
 }
 
