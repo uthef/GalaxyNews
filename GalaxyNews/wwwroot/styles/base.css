@@ -65,6 +65,10 @@ header, #main-content, footer {
     margin-bottom: 48px;
 }
 
+.top-space {
+    margin-top: 16px;
+}
+
 .button {
     display: inline-block;
     user-select: none;
@@ -73,8 +77,8 @@ header, #main-content, footer {
     padding: 12px;
     font-size: 16px;
     border-radius: 20px;
-    border: 2px solid #841844;
-    color: #841844;
+    border: 2px solid var(--outline-color);
+    color: var(--brand-color);
     text-transform: uppercase;
     text-decoration: none;
     transition: color .2s ease, background-color .2s ease;
@@ -100,6 +104,23 @@ a.button:hover {
     vertical-align: bottom !important;
 }
 
+a {
+    color: #000;
+}
+
+.accent-color {
+    color: var(--brand-color);
+}
+
+a:hover {
+    color: var(--brand-color);
+    text-decoration: none;
+}
+
+#author {
+    float: right;
+}
+
 /* Media queries */
 @media screen and (max-width: 380px) {
     #logo {
@@ -115,5 +136,16 @@ a.button:hover {
 
     header, #main-content, footer {
         padding: 24px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #author {
+        float: none;
+        margin-top: 16px;
+    }
+
+    footer {
+        text-align: center;
     }
 }

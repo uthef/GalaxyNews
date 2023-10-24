@@ -2,6 +2,7 @@
 @{
     Layout = "_Layout";
     ViewData["Title"] = Model.Article.Title;
+    ViewData["Description"] = Model.Article.Announce;
 }
 
 @section head {
@@ -21,7 +22,7 @@
     <div class="article-wrapper">
         <div class="text">
             <div class="announce">
-                @Html.Raw(Model.Article.Announce)
+                <p>@Model.Article.Announce</p>
             </div>
             <article>
                 @Html.Raw(Model.Article.Content)

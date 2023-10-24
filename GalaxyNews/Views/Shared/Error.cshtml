@@ -1,0 +1,17 @@
+﻿@model ErrorModel
+@{
+    Layout = "_Layout";
+    var title = $"Ошибка {Model.Code}";
+    ViewData["Title"] = title;
+}
+
+<div class="separator"></div>
+
+<div id="main-content">
+    <h1 class="accent-color">@title</h1>
+    <p>@Model.Message</p>
+    <a class="button top-space" href="~/">
+        <span class="material-symbols-outlined">arrow_back</span>
+        <span>Вернуться на главную</span>
+    </a>
+</div>

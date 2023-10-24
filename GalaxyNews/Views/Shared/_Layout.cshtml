@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="~/styles/base.css" />
         <link rel="shortcut icon" href="~/images/design/logo.svg" />
         <title>@ViewData["Title"] - Галактический вестник</title>
+        <meta name="description" content="@ViewData["Description"]" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -25,6 +26,10 @@
         <footer>
             <div class="separator btm-space"></div>
             <span>© @DateTime.Now.Year — 2412 «Галактический вестник»</span>
+            <div id="author">
+                <span>Автор:</span>
+                <a href="https://github.com/uthef">Nightcrawler</a>
+            </div>
         </footer>
     </body>
 </html>
