@@ -7,17 +7,19 @@ namespace GalaxyNews.Models
         public readonly IEnumerable<Article> News;
         public readonly int TotalPages;
         public readonly int CurrentPage;
+        public readonly Article? LatestArticle;
 
-        public IndexModel(IEnumerable<Article> news, int totalPages, int currentPage)
+        public IndexModel(IEnumerable<Article> news, Article? latestArticle, int totalPages, int currentPage)
         {
             News = news;
             TotalPages = totalPages;
             CurrentPage = currentPage;
+            LatestArticle = latestArticle;
         }
 
-        public string FormatLink(long id)
+        public string FormatLink(Article article)
         {
-            var link = $"/article?id={id}";
+            var link = $"/article?id={article.Id}";
             if (CurrentPage > 1) link += $"&from={CurrentPage}";
             return link;
         }

@@ -4,9 +4,57 @@
     ViewData["Title"] = $"Страница {Model.CurrentPage}";
 }
 
-@foreach (var article in Model.News)
-{
-    var link = Model.FormatLink(article.Id);
-    <text><a href="@link">@link</a></text>
-    <br />
+@section head {
+    <link rel="stylesheet" href="~/styles/index.css" />
 }
+
+@if (Model.LatestArticle is { })
+{
+    <div id="latest-article" style="background-image: url('@Formatter.GetAbsoluteImagePath(Model.LatestArticle.Image)')">
+        <div class="preview">
+            <h1>@Model.LatestArticle.Title</h1>
+            @Html.Raw(Model.LatestArticle.Announce)
+        </div>
+    </div>
+}
+
+<div id="main-content">
+    <h2>Новости</h2>
+    <div id="news-section">
+        @foreach (var article in Model.News)
+        {
+            <div class="article-preview">
+                <div class="date">@Formatter.GetDate(article.Date)</div>
+                <h3>@article.Title</h3>
+                <article>
+                    @Html.Raw(article.Announce)
+                </article>
+                <a class="button" href="@Model.FormatLink(article)">
+                    <span>Подробнее</span>
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </a>
+            </div>
+        }
+    </div>
+    <div class="page-switcher">
+        @for (int i = 1; i <= Model.TotalPages; i++)
+        {
+            if (i == Model.CurrentPage)
+            {
+                <span class="button disabled">@i</span>
+                continue;
+            }
+
+            <a class="button" href="@Formatter.GetPageLink(i)">@i</a>
+        }
+
+        @if (Model.CurrentPage < Model.TotalPages)
+        {
+            var nextPage = Model.CurrentPage + 1;
+
+            <a class="button wide" href="@Formatter.GetPageLink(nextPage)">
+                <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+        }
+    </div>
+</div>

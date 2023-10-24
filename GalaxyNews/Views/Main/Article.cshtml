@@ -4,4 +4,35 @@
     ViewData["Title"] = Model.Article.Title;
 }
 
-<a href="@Model.GoBackLink">Go back</a>
+@section head {
+    <link rel="stylesheet" href="~/styles/article.css" />
+}
+
+<div class="separator"></div>
+
+<div id="main-content">
+    <div class="breadcrumbs">
+        <a href="/">Главная</a>
+        <span>/</span>
+        <span>@Model.Article.Title</span>
+    </div>
+    <h1>@Model.Article.Title</h1>
+    <div class="date top-space">@Formatter.GetDate(Model.Article.Date)</div>
+    <div class="article-wrapper">
+        <div class="text">
+            <div class="announce">
+                @Html.Raw(Model.Article.Announce)
+            </div>
+            <article>
+                @Html.Raw(Model.Article.Content)
+            </article>
+            <div class="button-wrapper">
+                <a class="button" href="@Formatter.GetPageLink(Model.FromPage)">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                    <span>Назад к новостям</span>
+                </a>
+            </div>
+        </div>
+        <img src="@Model.AbsoluteImagePath" />
+    </div>
+</div>

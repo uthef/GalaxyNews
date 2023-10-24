@@ -1,6 +1,4 @@
 using GalaxyNews.Database.Models;
-using Microsoft.EntityFrameworkCore;
-using Npgsql;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();

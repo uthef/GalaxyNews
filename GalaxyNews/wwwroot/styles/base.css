@@ -1,0 +1,117 @@
+﻿:root {
+    --brand-color: #841844;
+    --outline-color: #9B407A;
+    --alt-brand-color: #2C145E;
+    --bg-color: #f5f5f5;
+    --foreground-color: #000000;
+    --date-bg-color: #ECF2F5;
+}
+
+body {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header, #main-content, footer {
+    display: block;
+    margin: auto;
+    max-width: 1440px;
+    padding: 32px;
+}
+
+#logo {
+    display: block;
+    background-image: url("/images/design/logo.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 16px;
+    background-size: 100%;
+    float: left;
+    width: 93px;
+    height: 67px;
+}
+
+#site-name {
+    display: inline-block;
+    user-select: none;
+    text-transform: uppercase;
+    color: var(--alt-brand-color);
+    font-size: 28px;
+    margin-top: -3px;
+    margin-bottom: 0;
+    line-height: 36.96px;
+    letter-spacing: 0.12em;
+}
+
+.separator {
+    background: #6C6E7B;
+    height: 1px;
+    width: 100%;
+}
+
+.date {
+    display: inline-block;
+    font-size: 12px;
+    padding: 8px 16px 8px 16px;
+    color: #6C6E7B;
+    border-radius: 16px;
+    background-color: var(--date-bg-color);
+}
+
+.btm-space {
+    margin-bottom: 48px;
+}
+
+.button {
+    display: inline-block;
+    user-select: none;
+    text-align: center;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 2px solid #841844;
+    color: #841844;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color .2s ease, background-color .2s ease;
+}
+
+a.button:hover {
+    color: #fff;
+    background-color: var(--brand-color);
+    transition: color .2s ease, background-color .2s ease;
+}
+
+.button.wide {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.button.disabled {
+    color: #000;
+    border-color: #000;
+}
+
+.material-symbols-outlined {
+    vertical-align: bottom !important;
+}
+
+/* Media queries */
+@media screen and (max-width: 380px) {
+    #logo {
+        display: none;
+        float: none;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    #site-name {
+        font-size: 22px;
+    }
+
+    header, #main-content, footer {
+        padding: 24px;
+    }
+}
