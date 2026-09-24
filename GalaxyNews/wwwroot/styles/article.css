@@ -29,7 +29,7 @@
 }
 
 .announce {
-    color: #841844;
+    color: var(--brand-color);
     font-weight: bold;
     font-size: 20px;
 }
