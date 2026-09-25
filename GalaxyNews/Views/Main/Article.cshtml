@@ -25,7 +25,13 @@
                 <p>@Model.Article.Announce</p>
             </div>
             <article>
-                @Html.Raw(Model.Article.Content)
+                @foreach (var paragraphText in Model.Article.Content.Split("\n"))
+                {
+                    @if (paragraphText.Length == 0)
+                        continue;
+                    
+                    <p>@paragraphText</p>
+                }
             </article>
             <div class="button-wrapper">
                 <a class="button" href="@Formatter.GetPageLink(Model.FromPage)">
