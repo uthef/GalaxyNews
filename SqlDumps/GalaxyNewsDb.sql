@@ -2,12 +2,12 @@
 -- PostgreSQL database dump
 --
 
-\restrict YIDHvp0Bj4X64fO8N1off7zA5CZGHfdBceQI4rx49ULMUKtETWbvxetbG7FFwXB
+\restrict TEHty6YvDfLNdgkqeFHfYTpRSNjm2XfsruJWwkbqmCajy6wVVfvWcmQ8oaiuNsP
 
 -- Dumped from database version 16.15 (eb11870)
 -- Dumped by pg_dump version 18.6
 
--- Started on 2026-09-25 03:34:31
+-- Started on 2026-09-25 03:41:16
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -23,18 +23,16 @@ SET row_security = off;
 
 --
 -- TOC entry 4 (class 2615 OID 2200)
--- Name: public; Type: SCHEMA; Schema: -; Owner: pg_database_owner
+-- Name: public; Type: SCHEMA; Schema: -; Owner: -
 --
 
 CREATE SCHEMA public;
 
 
-ALTER SCHEMA public OWNER TO pg_database_owner;
-
 --
 -- TOC entry 3333 (class 0 OID 0)
 -- Dependencies: 4
--- Name: SCHEMA public; Type: COMMENT; Schema: -; Owner: pg_database_owner
+-- Name: SCHEMA public; Type: COMMENT; Schema: -; Owner: -
 --
 
 COMMENT ON SCHEMA public IS 'standard public schema';
@@ -46,7 +44,7 @@ SET default_table_access_method = heap;
 
 --
 -- TOC entry 215 (class 1259 OID 16453)
--- Name: news; Type: TABLE; Schema: public; Owner: galaxynews_owner
+-- Name: news; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.news (
@@ -59,11 +57,9 @@ CREATE TABLE public.news (
 );
 
 
-ALTER TABLE public.news OWNER TO galaxynews_owner;
-
 --
 -- TOC entry 216 (class 1259 OID 16458)
--- Name: news_id_seq; Type: SEQUENCE; Schema: public; Owner: galaxynews_owner
+-- Name: news_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.news_id_seq
@@ -74,12 +70,10 @@ CREATE SEQUENCE public.news_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.news_id_seq OWNER TO galaxynews_owner;
-
 --
 -- TOC entry 3334 (class 0 OID 0)
 -- Dependencies: 216
--- Name: news_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: galaxynews_owner
+-- Name: news_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE public.news_id_seq OWNED BY public.news.id;
@@ -87,7 +81,7 @@ ALTER SEQUENCE public.news_id_seq OWNED BY public.news.id;
 
 --
 -- TOC entry 3180 (class 2604 OID 16459)
--- Name: news id; Type: DEFAULT; Schema: public; Owner: galaxynews_owner
+-- Name: news id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.news ALTER COLUMN id SET DEFAULT nextval('public.news_id_seq'::regclass);
@@ -96,7 +90,7 @@ ALTER TABLE ONLY public.news ALTER COLUMN id SET DEFAULT nextval('public.news_id
 --
 -- TOC entry 3326 (class 0 OID 16453)
 -- Dependencies: 215
--- Data for Name: news; Type: TABLE DATA; Schema: public; Owner: galaxynews_owner
+-- Data for Name: news; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.news (id, date, title, announce, content, image) FROM stdin;
@@ -123,7 +117,7 @@ COPY public.news (id, date, title, announce, content, image) FROM stdin;
 --
 -- TOC entry 3335 (class 0 OID 0)
 -- Dependencies: 216
--- Name: news_id_seq; Type: SEQUENCE SET; Schema: public; Owner: galaxynews_owner
+-- Name: news_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.news_id_seq', 17, true);
@@ -131,34 +125,18 @@ SELECT pg_catalog.setval('public.news_id_seq', 17, true);
 
 --
 -- TOC entry 3182 (class 2606 OID 16461)
--- Name: news news_pkey; Type: CONSTRAINT; Schema: public; Owner: galaxynews_owner
+-- Name: news news_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.news
     ADD CONSTRAINT news_pkey PRIMARY KEY (id);
 
 
---
--- TOC entry 2039 (class 826 OID 24577)
--- Name: DEFAULT PRIVILEGES FOR SEQUENCES; Type: DEFAULT ACL; Schema: public; Owner: cloud_admin
---
-
-ALTER DEFAULT PRIVILEGES FOR ROLE cloud_admin IN SCHEMA public GRANT ALL ON SEQUENCES TO neon_superuser WITH GRANT OPTION;
-
-
---
--- TOC entry 2038 (class 826 OID 24576)
--- Name: DEFAULT PRIVILEGES FOR TABLES; Type: DEFAULT ACL; Schema: public; Owner: cloud_admin
---
-
-ALTER DEFAULT PRIVILEGES FOR ROLE cloud_admin IN SCHEMA public GRANT SELECT,INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLES TO neon_superuser WITH GRANT OPTION;
-
-
--- Completed on 2026-09-25 03:34:35
+-- Completed on 2026-09-25 03:41:20
 
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict YIDHvp0Bj4X64fO8N1off7zA5CZGHfdBceQI4rx49ULMUKtETWbvxetbG7FFwXB
+\unrestrict TEHty6YvDfLNdgkqeFHfYTpRSNjm2XfsruJWwkbqmCajy6wVVfvWcmQ8oaiuNsP
 
