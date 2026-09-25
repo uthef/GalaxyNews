@@ -10,6 +10,7 @@
 - C#
 	- ASP.NET
 	- Entity Framework
+   	- Npgsql
 - PostgreSQL
 - Render (облачный хостинг)
 
