@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".dockerignore" />
+    <File Path="GalaxyNews/Dockerfile" />
+  </Folder>
+  <Project Path="GalaxyNews/GalaxyNews.csproj" />
+</Solution>
