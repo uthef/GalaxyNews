@@ -14,7 +14,7 @@
 - Render (облачный хостинг)
 
 ## Перед запуском
-* Импортировать SQL-дамп (см. **SqlDumps/GalaxyNews.sql**)
+* Импортировать SQL-дамп (см. ![SqlDumps/GalaxyNewsDb.sql](https://github.com/uthef/GalaxyNews/blob/master/SqlDumps/GalaxyNewsDb.sql))
 * Создать переменную среды "galaxynews_cs", содержащую в себе строку подключения к базе данных. Пример строки подключения: ```Host=localhost;Username=postgres;Password=1234;Port=5432;Database=postgres```
 
 ## Скриншоты
