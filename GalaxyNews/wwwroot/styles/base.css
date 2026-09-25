@@ -163,4 +163,8 @@ a:hover {
         --date-bg-color: #333636;
         --date-fg-color: #a1a5bb;
     }
+
+    .button {
+        color: #db9ab4;
+    }
 }
