@@ -23,14 +23,18 @@
     <h2>Новости</h2>
     <div id="news-section">
         @foreach (var article in Model.News)
-        {
+        { 
+            var articleLink = Model.FormatLink(article);
+            
             <div class="article-preview">
                 <div class="date">@Formatter.GetDate(article.Date)</div>
-                <h3><a href="@Model.FormatLink(article)">@article.Title</a></h3>
                 <article>
+                    <h3>
+                        <a href="@articleLink">@article.Title</a>
+                    </h3>
                     <p>@article.Announce</p>
                 </article>
-                <a class="button" href="@Model.FormatLink(article)">
+                <a class="button" href="@articleLink">
                     <span>Подробнее</span>
                     <span class="material-symbols-outlined">arrow_forward</span>
                 </a>

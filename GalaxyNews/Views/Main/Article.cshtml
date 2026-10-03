@@ -21,15 +21,15 @@
     <div class="date top-space">@Formatter.GetDate(Model.Article.Date)</div>
     <div class="article-wrapper">
         <div class="text">
-            <div class="announce">
-                <p>@Model.Article.Announce</p>
-            </div>
             <article>
+                <h2 class="announce">
+                    <span>@Model.Article.Announce</span>
+                </h2>
                 @foreach (var paragraphText in Model.Article.Content.Split("\n"))
                 {
                     @if (paragraphText.Length == 0)
                         continue;
-                    
+
                     <p>@paragraphText</p>
                 }
             </article>
@@ -40,6 +40,6 @@
                 </a>
             </div>
         </div>
-        <img src="@Model.AbsoluteImagePath" />
+        <img src="@Model.AbsoluteImagePath" alt="Сгенерированное изображение, дополняющее содержимое статьи">
     </div>
 </div>
