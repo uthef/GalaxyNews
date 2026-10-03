@@ -15,7 +15,7 @@
 	- Entity Framework Core
    	- Npgsql
 - PostgreSQL
-- Render (облачный хостинг)
+- [Render](https://render.com) (облачный хостинг)
 
 ## Запуск проекта
 ### Необходимые шаги перед запуском
