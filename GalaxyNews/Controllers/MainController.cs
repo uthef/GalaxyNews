@@ -23,7 +23,7 @@ namespace GalaxyNews.Controllers
             var totalPages = (int)Math.Ceiling(totalNewsCount / 4d);
             var currentPage = Math.Clamp(page, 1, totalPages);
 
-            var offset = (currentPage - 1) * NewsPortionSize;
+            var offset = Math.Max(0, (currentPage - 1) * NewsPortionSize);
 
             var latestNews = DbContext.News
                 .OrderByDescending(x => x.Date)
