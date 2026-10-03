@@ -1,4 +1,6 @@
 ﻿# GalaxyNews
+Проект, демонстрирующий базовые возможности платформы .NET в сфере веб-разработки.
+
 Сайт доступен по ссылке: https://galaxynews.onrender.com.
 
 > [!NOTE]
@@ -15,7 +17,7 @@
 	- Entity Framework Core
    	- Npgsql
 - PostgreSQL
-- Render (облачный хостинг)
+- [Render](https://render.com) (облачный хостинг)
 
 ## Запуск проекта
 ### Необходимые шаги перед запуском
