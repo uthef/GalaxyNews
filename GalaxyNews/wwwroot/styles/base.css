@@ -1,5 +1,6 @@
 ﻿:root {
     --brand-color: #841844;
+    --brand-color-darker: #530f2b;
     --outline-color: #9B407A;
     --alt-brand-color: #2C145E;
     --bg-color: #FFFFFF;
@@ -124,6 +125,15 @@ a:hover {
     float: right;
 }
 
+h3 > a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h3 > a:hover {
+    color: var(--brand-color-darker);
+}
+
 /* Media queries */
 @media screen and (max-width: 380px) {
     #logo {
@@ -156,6 +166,7 @@ a:hover {
 @media (prefers-color-scheme: dark) {
     body {
         --brand-color: #b84070;
+        --brand-color-darker: #802c4d;
         --outline-color: #aa5f90;
         --alt-brand-color: #8369bb;
         --bg-color: #0f0f0f;

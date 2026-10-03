@@ -26,7 +26,7 @@
         {
             <div class="article-preview">
                 <div class="date">@Formatter.GetDate(article.Date)</div>
-                <h3>@article.Title</h3>
+                <h3><a href="@Model.FormatLink(article)">@article.Title</a></h3>
                 <article>
                     <p>@article.Announce</p>
                 </article>
