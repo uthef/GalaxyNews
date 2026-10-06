@@ -30,6 +30,10 @@ $env:galaxynews_cs='Database=dbname;Username=dbuser;Password=12345678;Port=5432;
 dotnet run --project GalaxyNews
 ```
 
+## Реализации с альтернативным стеком технологий
+### PHP + MySQL
+* [galaxynews-php](https://github.com/uthef/galaxynews-php)
+
 ## Скриншоты
 ![Широкоформатный макет](Screenshots/1.png "Широкоформатный макет")
 ![Макет на мобильных устройствах](Screenshots/2.png "Макет на мобильных устройствах")
